@@ -314,7 +314,7 @@ template<class Z>
 void City::PriorityImplementation(vector<Z*> zones) {
 
     typename vector<Z*>::iterator itr;
-    priority_queue<pair<int, Z*>> p_queue;
+    priority_queue<pair<int, Z*> > p_queue;
 
     for (itr = zones.begin(); itr != zones.end(); itr++) {
         p_queue.push(make_pair((*itr)->getPopulation(), (*itr)));
@@ -341,7 +341,7 @@ void City::PriorityImplementation(vector<Z*> zones) {
 template<class Z>
 void City::PriorityImplementation2(vector<Z*> zones) {
     typename vector<Z*>::iterator itr;
-    priority_queue<pair<int, Z*>> p_queue;
+    priority_queue<pair<int, Z*> > p_queue;
 
     for (itr = zones.begin(); itr != zones.end(); itr++) {
         p_queue.push(make_pair((*itr)->getAdjPopulation(), (*itr)));
@@ -365,7 +365,7 @@ template<class Z>
 void City::PriorityImplementation3(vector<Z*> zones) {
     typename vector<Z*>::iterator itr;
     typedef pair<int, Z*> px;
-    priority_queue<px, vector<px>, greater<px>> p_queue;
+    priority_queue<px, vector<px>, greater<px> > p_queue;
 
     for (itr = zones.begin(); itr != zones.end(); itr++) {
         p_queue.push(make_pair((*itr)->getY(), (*itr)));
@@ -389,7 +389,7 @@ template<class Z>
 void City::PriorityImplementation4(vector<Z*> zones) {
     typename vector<Z*>::iterator itr;
     typedef pair<int, Z*> py;
-    priority_queue<py, vector<py>, greater<py>> p_queue;
+    priority_queue<py, vector<py>, greater<py> > p_queue;
 
     for (itr = zones.begin(); itr != zones.end(); itr++) {
         p_queue.push(make_pair((*itr)->getX(), (*itr)));
